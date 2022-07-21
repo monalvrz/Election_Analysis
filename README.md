@@ -43,6 +43,8 @@ The analysis of the election show that:
 ## Election-Audit Summary
 In addition to providing the results of the election audit, the project sought to provide a code that could be reused to obtain data for future elections.The code will be broken down to review how it can be adapted to work with any election information.
 
+In the first place, the program will allow us to upload any data base that is stored in a CSV file. 
+
 ```
 # Add our dependencies.
 import csv
@@ -52,7 +54,18 @@ import os
 file_to_load = os.path.join('Resources', 'election_results.csv')
 # Add a variable to save the file to a path.
 file_to_save = os.path.join("Analysis", "election_analysis.txt")
+```
 
+Subsequently, we execute the following steps:
+  - Initialize a total vote counter.
+  - Create a candidate and county set of lists and dictionaries that will containe the information we will collect.
+  - Initialize the empty strings that will hold the candidates and counties names and counts.
+      **This strings can be adapted to any data base who containes candidate and counties informatión**
+  - Read the CSV file and convert ir into a list of dictionaries.
+  - Read the header.
+  - Next we will initialize a for loop that will iterate on the selected columns of our file to obtaine the total votes, the 
+
+```
 # Initialize a total vote counter.
 total_votes = 0
 
@@ -119,4 +132,5 @@ with open(file_to_load) as election_data:
         # 5: Add a vote to that county's vote count.
         county_votes[counties_name] += 1
  ```
+
 
