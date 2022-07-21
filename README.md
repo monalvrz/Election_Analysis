@@ -43,7 +43,7 @@ The analysis of the election show that:
 ## Election-Audit Summary
 In addition to providing the results of the election audit, the project sought to provide a code that could be reused to obtain data for future elections.The code will be broken down to review how it can be adapted to work with any election information.
 
-""
+```
 # Add our dependencies.
 import csv
 import os
@@ -118,6 +118,5 @@ with open(file_to_load) as election_data:
 
         # 5: Add a vote to that county's vote count.
         county_votes[counties_name] += 1
-        
-""
+ ```
 
