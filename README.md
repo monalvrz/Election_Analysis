@@ -19,8 +19,6 @@ Although this task could have been performed in Excel, the tool used to work wit
 - Software: Python 3.6.1, Visual Studio Code, 1.38.1
 
 ## Election-Audit Results
-<img width="298" alt="election_analysis" src="https://user-images.githubusercontent.com/107893200/180316245-df9c6764-ad58-4cf4-8f07-abea94bef6f2.png">
-
 The analysis of the election show that:
 - The were **369,711 votes** cast in the election.
 - The voter tournout for each county was:
@@ -39,6 +37,8 @@ The analysis of the election show that:
   - Raymon Anthony Doane received 3.1% of the vote and 11,606 number of votes.
 - The **winner** of the election was:
   - Candidate **Diana DeGette**, who received 73.8% of the vote and 272,892 number of votes.
+
+<img width="298" alt="election_analysis" src="https://user-images.githubusercontent.com/107893200/180316245-df9c6764-ad58-4cf4-8f07-abea94bef6f2.png">
 
 ## Election-Audit Summary
 In addition to providing the results of the election audit, the project sought to provide a code that could be reused to obtain data for future elections.The code will be broken down to review how it can be adapted to work with any election information.
@@ -60,8 +60,7 @@ Subsequently, we execute the following steps:
   - Initialize a total vote counter.
   - Create a candidate and county list and dictionaries that will containe the information we will collect.
   - Initialize the empty variables that will hold the candidates and counties names and counts.
-  - 
-      **This strings can be adapted to any data base who containes candidate and counties information**
+  -  **This variables can be adapted to any data base who containes candidate and counties information**
   - Read the CSV file and convert it into a list of dictionaries.
   - Read the header.
   - Create a for loop to obtain the total votes, the number of candidate names and county names.
@@ -164,7 +163,7 @@ with open(file_to_save, "w") as txt_file:
  - Print the information on the terminal.
  - Save the information on a text file.
 
-**To obtain this information we have to write a for loop that will help us retrieve the information an easily calculate th percentages. In addition we have to write and if statment tha will determine the winner candidate and the winning county based on the vote count.** _To replecate this part of the script with other data bases we have to pay attention on the list and dictionaries we created in the first section. It can be easilly change for other information, the only importan part is to maintain the same if statement and respect the indentation. It won't change if you are more or less information to the database.
+**To obtain this information we have to write a for loop that will help us retrieve the information an easily calculate th percentages. In addition we have to write and if statment that will determine the winner candidate and the winning county based on the vote count.** _To replecate this part of the script with other data bases we have to pay attention on the list and dictionaries we created in the first section. It can be easilly change for other information, the only importan part is to maintain the same if statement and respect the indentation. It won't change if you are more or less information to the database._
  
   ```
   # 6a: Write a for loop to get the county from the county dictionary
