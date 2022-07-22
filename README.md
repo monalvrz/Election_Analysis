@@ -164,7 +164,7 @@ with open(file_to_save, "w") as txt_file:
  - Print the information on the terminal.
  - Save the information on a text file.
 
-**To obtain this information we have to use the lists and the dictionaries we created in the first part. It can be easilly change for other information, the only importan part is to maintain the same formula. It won't change if you are more or less information to the database.**
+**To obtain this information we have to write a for loop that will help us retrieve the information an easily calculate th percentages. In addition we have to write and if statment tha will determine the winner candidate and the winning county based on the vote count.** _To replecate this part of the script with other data bases we have to pay attention on the list and dictionaries we created in the first section. It can be easilly change for other information, the only importan part is to maintain the same if statement and respect the indentation. It won't change if you are more or less information to the database.
  
   ```
   # 6a: Write a for loop to get the county from the county dictionary
@@ -256,5 +256,24 @@ total_votes = total_votes + 1
  candidate_name = row[2]
  counties_name = row[1]
  ```
- 8. Use the if condition to iterate through the rows and fecth the information you need.
+ 8. Use the if condition to iterate through the rows to search and append the information you need.
+ 9. Write a for loop to retrieve the vote count and calculate the percentage.
+```
+for counties_name in county_votes:
+
+        vote_count = county_votes.get(counties_name)
+        
+        vote_count_percentage = float(vote_count) / float(total_votes) * 100
+        county_results = (
+            f"{counties_name}: {vote_count_percentage:.1f}% ({vote_count:,})\n")
+```
+
+ 11. Additionally, write and if statment that will determine a winner.
+```
+if (vote_count > county_voter_turnout) and (vote_count_percentage > winning_turnout_percentage):
+                        county_voter_turnout = vote_count
+                        winning_turnout_percentage = vote_count_percentage
+                        largest_county = counties_name
+```
+ 13. Don't forget to print and save your information in a text file on every step.   
 
