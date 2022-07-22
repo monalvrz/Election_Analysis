@@ -58,13 +58,20 @@ file_to_save = os.path.join("Analysis", "election_analysis.txt")
 
 Subsequently, we execute the following steps:
   - Initialize a total vote counter.
-  - Create a candidate and county set of lists and dictionaries that will containe the information we will collect.
+  - Create a candidate and county list and dictionaries that will containe the information we will collect.
   - Initialize the empty strings that will hold the candidates and counties names and counts.
-      **This strings can be adapted to any data base who containes candidate and counties informatión**
-  - Read the CSV file and convert ir into a list of dictionaries.
+  - 
+      **This strings can be adapted to any data base who containes candidate and counties information**
+  - Read the CSV file and convert it into a list of dictionaries.
   - Read the header.
-  - Next we will initialize a for loop that will iterate on the selected columns of our file to obtaine the total votes, the 
-
+  - Create a for loop to obtain the total votes, the number of candidate names and county names.
+  - Next we will initialize a if condition that will iterate on the selected columns of our file to obtaine the total votes, the candidate names and the county names and add them to a list if not repeated. **The if condition is the element that will help the Colorado Board of Elections to use this code on other elections, not only with this particular election. The loop will hold only the information that we need. It doesn't matter if there are three, five, eight or ten candidates and counties, this formula will retrieve each one of them.** 
+      _Example: Imagine you have five candidates instead of three.
+                candidate_names: Charles Casper Stockham, Diana DeGette, Raymon Anthony Doane, Jonathan Simons, Stephanie Miller
+                The if condition will append each name in the 'candidate_options' list.
+                The same scenario will happen with the counties, the loop_
+ - Finally, we will add the data on the lists.
+ 
 ```
 # Initialize a total vote counter.
 total_votes = 0
